@@ -35,7 +35,7 @@
             
           <div class="col-md-4 mx-auto text-center">
                 <label for="dataInicial" class="form-label" style="font-size: 15px;">Data Inicial:</label>
-                <input type="date" id="dataInicial" name="dataInicial" class="form-control">
+                <input type="date" id="dataInicial" name="dataInicial" class="form-control" required>
           </div>
  
             <div class="col-12">
@@ -43,10 +43,11 @@
                 <button onclick="voltar()" class="btn btn-secondary mt-3">Voltar</button>
             </div>
         </form>
-       </div>
         
         <!-- Tabela inicialmente oculta -->
           <table id="resultadoTabela" class="table" style="display: none; margin: auto; max-width: 700px;">
+          <table id="resultadoTabela" class="table" style="display: none;">
+
             <thead>
                 <tr>
                     <th>Nome</th>
