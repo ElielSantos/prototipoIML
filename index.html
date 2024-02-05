@@ -31,19 +31,30 @@
     <h2>Pesquisa</h2>
     <br>
 
+    <div class="container mt-5 text-center"> <!-- Adicione a classe text-center aqui -->
+
+    <h2>Pesquisa</h2>
+    <br>
+
     <form action="consulta.html" method="post" class="row g-3 mx-auto"> <!-- Adicione a classe mx-auto aqui -->
 
-        <div class="col-md-4">
+        <div class="col-md-4 mx-auto"> <!-- Adicione a classe mx-auto aqui -->
             <label for="dataInicial" class="form-label">Data Inicial:</label>
-            <input type="date" id="dataInicial" name="dataInicial" class="form-control" required>
+            <input type="date" id="dataInicial" name="dataInicial" class="form-control mx-auto" required> <!-- Adicione a classe mx-auto aqui -->
+        </div>
+
+        <div class="col-md-4 mx-auto"> <!-- Adicione a classe mx-auto aqui para outros campos -->
+            <!-- Adicione outros campos de pesquisa aqui -->
         </div>
 
         <div class="col-12">
             <button onclick="pesquisar()" class="btn btn-primary">Pesquisar</button>
             <button onclick="voltar()" class="btn btn-secondary">Voltar</button>
         </div>
-    </form>
+    </form>        
+</div>
 
+         
         <!-- Tabela inicialmente oculta -->
         <table id="resultadoTabela" class="table" style="display: none;">
             <thead>
