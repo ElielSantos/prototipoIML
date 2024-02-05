@@ -31,7 +31,7 @@
         <h4>Consultar Divulgação de Entrada</h4>
         <br>
 
-        <form onsubmit="return pesquisar()" class="row g-3 justify-content-center">
+        <form onsubmit="pesquisar(event)" class="row g-3 justify-content-center">
             
             <div class="col-md-4 text-center">
                 <label for="dataInicial" class="form-label">Data Inicial:</label>
@@ -67,7 +67,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-       function pesquisar() {
+       function pesquisar(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
            
         var dadosPesquisa = [
         { nome: "F A", dataNascimento: "01/02/1990", enderecoRecolhimento: "Rua Principal ", unidadePCP: "Londrina" },
