@@ -25,13 +25,14 @@
         </div>
     </nav>
 
-      <div class="container-fluid">
+    <div class="container mt-5 text-center">
+
         <h4>Consultar Divulgação de Entrada</h4>
         <br>
 
         <form onsubmit="pesquisar(event)" class="row g-3 justify-content-center">
             
-            <div class="col-md-5 text-center">
+            <div class="col-md-4 text-center">
                 <label for="dataInicial" class="form-label">Data Inicial:</label>
                 <input type="date" id="dataInicial" name="dataInicial" class="form-control">
             </div>
@@ -43,7 +44,7 @@
         </form>
         
         <!-- Tabela inicialmente oculta -->
-<table id="resultadoTabela" class="table table-responsive" style="display: none; margin: auto; margin-right: 10px;">
+         <table id="resultadoTabela" class="table" style="display: none; margin: auto;">
              
              <thead>
                 <tr>
