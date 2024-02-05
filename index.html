@@ -60,8 +60,7 @@
                 <!-- Dados da pesquisa serão inseridos aqui -->
             </tbody>
         </table>
-        <div id="comentarioTabela" style="display: none; margin-top: 10px; color: #777;">
-         * Esta tabela exibe os resultados da fictícios
+ 
       </div>
      </div>
 
@@ -70,9 +69,6 @@
 
     <script>
        function pesquisar() {
-           
-           document.getElementById("resultadoTabela").style.display = "table";
-           document.getElementById("comentarioTabela").style.display = "block";   
            
         var dadosPesquisa = [
         { nome: "F A", dataNascimento: "01/02/1990", enderecoRecolhimento: "Rua Principal ", unidadePCP: "Londrina" },
@@ -111,4 +107,11 @@ function voltar() {
 
     </script>
 </body>
+
+            <div>
+              <footer class="text-center mt-3">
+    * Esta tabela exibe os resultados fictícios
+</footer>
+            </div>
+            
 </html>
