@@ -17,7 +17,7 @@
         }
 
         @media (max-width: 767.98px) {
-            /* Estilo para telas menores, ajuste conforme necessário */
+            /* Estilo para telas menores */
             table {
                 width: 100%;
             }
@@ -35,15 +35,36 @@
 
     <div class="container mt-5 text-center">
 
-        <h4>Consultar Divulgação de Entrada</h4>
+        <h4>Consultar Entrada de Cadáver</h4>
         <br>
 
         <form onsubmit="pesquisar(event)" class="row g-3 justify-content-center">
             
-            <div class="col-md-4 text-center">
+            <div class="col-md-2">
                 <label for="dataInicial" class="form-label">Data Inicial:</label>
-                <input type="date" id="dataInicial" name="dataInicial" class="form-control">
+                <input type="date" id="dataInicial" name="dataInicial" class="form-control"> <!--required pode ser adicionado-->
+            </div>  
+
+            <div class="col-md-2">
+                <label for="dataFinal" class="form-label">Data Final:</label>
+                <input type="date" id="dataFinal" name="dataFinal" class="form-control"> <!--required pode ser adicionado-->
             </div>
+
+            <div class="w-100"></div>
+
+            <div class="col-md-2">
+                <label for="unidade" class="form-label">Unidade:</label> <!--required pode ser adicionado-->
+                <select class="form-control" id="unidade" name="unidade">
+                    <option value="Curitiba">Todos</option>
+                    <option value="Curitiba">Curitiba</option>
+                    <option value="Londrina">Londrina</option>
+                    <option value="Jacarezinho">Jacarezinho</option>
+                    <option value="Umuarama">Umuarama</option>
+                    <option value="Cascavel">Cascavel</option>
+                    <option value="Guarapuava">Guarapuava</option>
+                </select>
+            </div>
+            
  
             <div class="col-12 mt-3">
                 <button type="submit" class="btn btn-primary">Pesquisar</button>
@@ -60,6 +81,8 @@
                     <th>Data de Nascimento</th>
                     <th>Endereço de Recolhimento</th>
                     <th>Unidade PCP</th>
+                    <th>N° Caso</th>
+                    <th>REP NECRO</th>
                 </tr>
                 
             </thead>
@@ -78,10 +101,10 @@
             event.preventDefault(); // Impede o envio padrão do formulário
            
         var dadosPesquisa = [
-        { nome: "F A", dataNascimento: "01/02/1990", enderecoRecolhimento: "Rua Principal ", unidadePCP: "Londrina" },
-        { nome: "G P", dataNascimento: "02/05/1978", enderecoRecolhimento: "Rua da Escola", unidadePCP: "Curitiba" },
-        { nome: "G C", dataNascimento: "21/09/2005", enderecoRecolhimento: "Rua da Feira", unidadePCP: "Jacarezinho" }
-    ];
+        { nome: "F A", dataNascimento: "01/02/1990", enderecoRecolhimento: "Rua Principal ", unidadePCP: "Londrina", NCaso: "1021" , RepNecro: "001/2024"},
+        { nome: "G P", dataNascimento: "02/05/1978", enderecoRecolhimento: "Rua da Escola", unidadePCP: "Curitiba",  NCaso: "1022" , RepNecro: "002/2024"},
+        { nome: "G C", dataNascimento: "21/09/2005", enderecoRecolhimento: "Rua da Feira", unidadePCP: "Jacarezinho",  NCaso: "1023" , RepNecro: "003/2024"}
+     ];
 
     // Obtenha a referência da tabela
     var tabela = document.getElementById("resultadoTabela").getElementsByTagName('tbody')[0];
@@ -96,11 +119,18 @@
         var celula2 = linha.insertCell(1);
         var celula3 = linha.insertCell(2);
         var celula4 = linha.insertCell(3);
+        var celula5 = linha.insertCell(4);
+        var celula6 = linha.insertCell(5);
+
+
 
         celula1.innerHTML = dadosPesquisa[i].nome;
         celula2.innerHTML = dadosPesquisa[i].dataNascimento;
         celula3.innerHTML = dadosPesquisa[i].enderecoRecolhimento;
         celula4.innerHTML = dadosPesquisa[i].unidadePCP;
+        celula5.innerHTML = dadosPesquisa[i].NCaso;
+        celula6.innerHTML = dadosPesquisa[i].RepNecro;
+
     }
 
     // Exibe a tabela
