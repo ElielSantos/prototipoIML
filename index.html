@@ -55,7 +55,7 @@
             <div class="col-md-2">
                 <label for="unidade" class="form-label">Unidade:</label> <!--required pode ser adicionado-->
                 <select class="form-control" id="unidade" name="unidade">
-                    <option value="Curitiba">Todos</option>
+                    <option value="Todos">Todos</option>
                     <option value="Curitiba">Curitiba</option>
                     <option value="Londrina">Londrina</option>
                     <option value="Jacarezinho">Jacarezinho</option>
@@ -99,49 +99,40 @@
     <script>
        function pesquisar(event) {
             event.preventDefault(); // Impede o envio padrão do formulário
-           
-        var dadosPesquisa = [
-        { nome: "F A", dataNascimento: "01/02/1990", enderecoRecolhimento: "Rua Principal ", unidadePCP: "Londrina", NCaso: "1021" , RepNecro: "001/2024"},
-        { nome: "G P", dataNascimento: "02/05/1978", enderecoRecolhimento: "Rua da Escola", unidadePCP: "Curitiba",  NCaso: "1022" , RepNecro: "002/2024"},
-        { nome: "G C", dataNascimento: "21/09/2005", enderecoRecolhimento: "Rua da Feira", unidadePCP: "Jacarezinho",  NCaso: "1023" , RepNecro: "003/2024"}
-     ];
+            carregarDados(); // Chama a função para carregar os dados
+            // Exibe a tabela
+            document.getElementById("resultadoTabela").style.display = "table";
+        }
 
-    // Obtenha a referência da tabela
-    var tabela = document.getElementById("resultadoTabela").getElementsByTagName('tbody')[0];
+        function voltar() {
+            // Oculta a tabela
+            document.getElementById("resultadoTabela").style.display = "none";
+        }
 
-    // Limpe os dados existentes na tabela
-    tabela.innerHTML = "";
+        // Função para fazer uma solicitação AJAX
+        function carregarDados() {
+            fetch('https://elielsantos.github.io/API-Dados-Teste/dados.json')
+                .then(response => response.json())
+                .then(data => {
+                    var tabela = document.getElementById("resultadoTabela").getElementsByTagName('tbody')[0];
+                    tabela.innerHTML = ""; // Limpa os dados existentes na tabela
 
-    // Itere sobre os dados da pesquisa e adicione-os à tabela
-    for (var i = 0; i < dadosPesquisa.length; i++) {
-        var linha = tabela.insertRow(i);
-        var celula1 = linha.insertCell(0);
-        var celula2 = linha.insertCell(1);
-        var celula3 = linha.insertCell(2);
-        var celula4 = linha.insertCell(3);
-        var celula5 = linha.insertCell(4);
-        var celula6 = linha.insertCell(5);
-
-
-
-        celula1.innerHTML = dadosPesquisa[i].nome;
-        celula2.innerHTML = dadosPesquisa[i].dataNascimento;
-        celula3.innerHTML = dadosPesquisa[i].enderecoRecolhimento;
-        celula4.innerHTML = dadosPesquisa[i].unidadePCP;
-        celula5.innerHTML = dadosPesquisa[i].NCaso;
-        celula6.innerHTML = dadosPesquisa[i].RepNecro;
-
-    }
-
-    // Exibe a tabela
-    document.getElementById("resultadoTabela").style.display = "table";
-}
-
-function voltar() {
-    // Oculta a tabela
-    document.getElementById("resultadoTabela").style.display = "none";
-}
-</script>
+                    // Itera sobre os dados recebidos e adiciona-os à tabela
+                    data.forEach(function(row) {
+                        var newRow = tabela.insertRow();
+                        newRow.innerHTML = `
+                            <td>${row.nome}</td>
+                            <td>${row.dataNascimento}</td>
+                            <td>${row.endereco}</td>
+                            <td>${row.unidade}</td>
+                            <td>${row.nCaso}</td>
+                            <td>${row.repNecro}</td>
+                        `;
+                    });
+                })
+                .catch(error => console.error('Erro ao carregar dados:', error));
+        }
+    </script>
     
     <div>
         <footer class="text-center mt-3"> * Esta tabela exibe resultados fictícios</footer>
