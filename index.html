@@ -113,24 +113,37 @@
             fetch('https://elielsantos.github.io/API-Dados-Teste/dados.json')
                 .then(response => response.json())
                 .then(data => {
-                    var tabela = document.getElementById("resultadoTabela").getElementsByTagName('tbody')[0];
-                    tabela.innerHTML = ""; // Limpa os dados existentes na tabela
+                var tabela = document.getElementById("resultadoTabela").getElementsByTagName('tbody')[0];
+                tabela.innerHTML = ""; // Limpa os dados existentes na tabela
 
-                    // Itera sobre os dados recebidos e adiciona-os à tabela
-                    data.forEach(function(row) {
-                        var newRow = tabela.insertRow();
-                        newRow.innerHTML = `
-                            <td>${row.nome}</td>
-                            <td>${row.dataNascimento}</td>
-                            <td>${row.endereco}</td>
-                            <td>${row.unidade}</td>
-                            <td>${row.nCaso}</td>
-                            <td>${row.repNecro}</td>
-                        `;
-                    });
-                })
-                .catch(error => console.error('Erro ao carregar dados:', error));
-        }
+                // Datas fornecidas pelo usuário
+                var dataInicial = new Date(document.getElementById("dataInicial").value);
+                var dataFinal = new Date(document.getElementById("dataFinal").value);
+                var unidadeSelecionada = document.getElementById("unidade").value;
+
+                // Itera sobre os dados recebidos e adiciona-os à tabela se estiverem no intervalo de datas e correspondem à unidade selecionada
+                data.forEach(function(row) {
+                    // Convertendo as datas do formato do JSON para o formato desejado
+                    var partesDataEntrada = row.dataEntrada.split(" ")[0].split("/");
+                    var dataEntradaFormatada = new Date(partesDataEntrada[2], partesDataEntrada[1] - 1, partesDataEntrada[0]);
+
+                if (dataEntradaFormatada >= dataInicial && dataEntradaFormatada <= dataFinal && (unidadeSelecionada === "Todos" || row.unidade === unidadeSelecionada)) {
+                    var newRow = tabela.insertRow();
+                    newRow.innerHTML = `
+                        <td>${row.nome}</td>
+                        <td>${row.dataNascimento}</td>
+                        <td>${row.endereco}</td>
+                        <td>${row.unidade}</td>
+                        <td>${row.nCaso}</td>
+                        <td>${row.repNecro}</td>
+                    `;
+                }
+            });
+        })
+        .catch(error => console.error('Erro ao carregar dados:', error));
+}
+    
+     
     </script>
     
     <div>
