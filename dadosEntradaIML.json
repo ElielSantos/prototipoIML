@@ -1,0 +1,202 @@
+[ //DADOS NÃO REAIS!
+    {
+        "id": 1,
+        "nome": "F A",
+        "dataNascimento": "22/02/1990",
+        "dataEntrada": "02/01/2024 10:31:00",
+        "endereco": "Rua Principal",
+        "unidade": "Londrina",
+        "nCaso": "1021",
+        "repNecro": "001/2024"
+    },
+    {
+        "id": 2,
+        "nome": "G P",
+        "dataNascimento": "02/05/1978",
+        "dataEntrada": "04/01/2024 19:21:00",
+        "endereco": "Rua da Escola",
+        "unidade": "Curitiba",
+        "nCaso": "1022",
+        "repNecro": "002/2024"
+    },
+    {
+        "id": 3,
+        "nome": "G C",
+        "dataNascimento": "21/09/2005",
+        "dataEntrada": "05/01/2024 19:31:00",
+        "endereco": "Rua da Feira",
+        "unidade": "Jacarezinho",
+        "nCaso": "1023",
+        "repNecro": "003/2024"
+    },
+    {
+        "id": 4,
+        "nome": "J D",
+        "dataNascimento": "15/03/1982",
+        "dataEntrada": "06/01/2024 19:31:00",
+        "endereco": "Rua da Praia",
+        "unidade": "Cascavel",
+        "nCaso": "1024",
+        "repNecro": "004/2024"
+    },
+    {
+        "id": 5,
+        "nome": "L S",
+        "dataNascimento": "10/11/1995",
+        "dataEntrada": "08/01/2024 19:31:00",
+        "endereco": "Avenida Central",
+        "unidade": "Guarapuava",
+        "nCaso": "1025",
+        "repNecro": "005/2024"
+    },
+    {
+        "id": 6,
+        "nome": "M B",
+        "dataNascimento": "11/10/1987",
+        "dataEntrada": "10/01/2024 10:15:00",
+        "endereco": "Rua das Flores",
+        "unidade": "Londrina",
+        "nCaso": "1026",
+        "repNecro": "006/2024"
+    },
+    {
+        "id": 7,
+        "nome": "N C",
+        "dataNascimento": "25/07/1993",
+        "dataEntrada": "15/01/2024 14:45:00",
+        "endereco": "Avenida Central",
+        "unidade": "Curitiba",
+        "nCaso": "1027",
+        "repNecro": "007/2024"
+    },
+    {
+        "id": 8,
+        "nome": "O D",
+        "dataNascimento": "03/04/1975",
+        "dataEntrada": "20/01/2024 08:30:00",
+        "endereco": "Rua do Comércio",
+        "unidade": "Jacarezinho",
+        "nCaso": "1028",
+        "repNecro": "008/2024"
+    },
+    {
+        "id": 9,
+        "nome": "P E",
+        "dataNascimento": "18/09/1980",
+        "dataEntrada": "25/01/2024 16:20:00",
+        "endereco": "Rua das Pedras",
+        "unidade": "Cascavel",
+        "nCaso": "1029",
+        "repNecro": "009/2024"
+    },
+    {
+        "id": 10,
+        "nome": "Q F",
+        "dataNascimento": "07/12/1997",
+        "dataEntrada": "30/01/2024 21:10:00",
+        "endereco": "Rua da Paz",
+        "unidade": "Guarapuava",
+        "nCaso": "1030",
+        "repNecro": "010/2024"
+    },
+    {
+        "id": 11,
+        "nome": "R G",
+        "dataNascimento": "14/08/1998",
+        "dataEntrada": "05/02/2024 11:20:00",
+        "endereco": "Avenida Principal",
+        "unidade": "Londrina",
+        "nCaso": "1031",
+        "repNecro": "011/2024"
+    },
+    {
+        "id": 12,
+        "nome": "S H",
+        "dataNascimento": "20/06/1990",
+        "dataEntrada": "08/02/2024 08:45:00",
+        "endereco": "Rua dos Sonhos",
+        "unidade": "Curitiba",
+        "nCaso": "1032",
+        "repNecro": "012/2024"
+    },
+    {
+        "id": 13,
+        "nome": "T I",
+        "dataNascimento": "05/04/1985",
+        "dataEntrada": "10/02/2024 16:10:00",
+        "endereco": "Avenida dos Girassóis",
+        "unidade": "Jacarezinho",
+        "nCaso": "1033",
+        "repNecro": "013/2024"
+    },
+    {
+        "id": 14,
+        "nome": "U J",
+        "dataNascimento": "19/02/1977",
+        "dataEntrada": "15/02/2024 09:25:00",
+        "endereco": "Rua da Vitória",
+        "unidade": "Cascavel",
+        "nCaso": "1034",
+        "repNecro": "014/2024"
+    },
+    {
+        "id": 15,
+        "nome": "V K",
+        "dataNascimento": "10/11/1988",
+        "dataEntrada": "18/02/2024 18:30:00",
+        "endereco": "Rua da Esperança",
+        "unidade": "Guarapuava",
+        "nCaso": "1035",
+        "repNecro": "015/2024"
+    },
+    {
+        "id": 16,
+        "nome": "W L",
+        "dataNascimento": "07/09/1979",
+        "dataEntrada": "20/02/2024 14:50:00",
+        "endereco": "Avenida da Liberdade",
+        "unidade": "Londrina",
+        "nCaso": "1036",
+        "repNecro": "016/2024"
+    },
+    {
+        "id": 17,
+        "nome": "X M",
+        "dataNascimento": "24/03/1992",
+        "dataEntrada": "22/02/2024 07:55:00",
+        "endereco": "Rua dos Amores",
+        "unidade": "Curitiba",
+        "nCaso": "1037",
+        "repNecro": "017/2024"
+    },
+    {
+        "id": 18,
+        "nome": "Y N",
+        "dataNascimento": "15/01/1983",
+        "dataEntrada": "25/02/2024 12:40:00",
+        "endereco": "Avenida dos Anjos",
+        "unidade": "Jacarezinho",
+        "nCaso": "1038",
+        "repNecro": "018/2024"
+    },
+    {
+        "id": 19,
+        "nome": "Z O",
+        "dataNascimento": "28/12/1974",
+        "dataEntrada": "28/02/2024 20:15:00",
+        "endereco": "Rua das Maravilhas",
+        "unidade": "Cascavel",
+        "nCaso": "1039",
+        "repNecro": "019/2024"
+    },
+    {
+        "id": 20,
+        "nome": "A P",
+        "dataNascimento": "09/10/1986",
+        "dataEntrada": "29/02/2024 22:30:00",
+        "endereco": "Avenida da Paz",
+        "unidade": "Guarapuava",
+        "nCaso": "1040",
+        "repNecro": "020/2024"
+    }
+]
